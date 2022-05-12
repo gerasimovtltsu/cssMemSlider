@@ -1,1 +1,87 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+body {
+  background-color: #25282a;
+  color: #eee;
+}
+
+.container {
+  max-width: 50vw;
+  margin: 0 auto;
+}
+
+input[type="radio"],
+input[type="radio"]:not(:checked) ~ .controls {
+  display: none;
+}
+
+input[type="radio"]:not(:checked) ~ .image,
+input[type="radio"]:not(:checked) ~ .properties,
+input[type="radio"]:not(:checked) ~ .image img,
+input[type="radio"]:not(:checked) ~ .properties p {
+  max-height: 0px;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.image img {
+  width: 100%;
+  border-radius: 10px;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.properties {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.slide p {
+  opacity: 1;
+  margin-right: 15px;
+}
+
+.controls label {
+  padding: 10px 5px;
+  cursor: pointer;
+}
+
+.controls label .pointer {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #72AFE4;
+  background-color: #72AFE4;
+}
+
+.controls label.current .pointer {
+  background-color: transparent;
+}
+
+.controls label:hover .pointer {
+  border: 2px solid #fff;
+  background-color: #fff;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.controls label:active .pointer {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+/*# sourceMappingURL=style.css.map */
